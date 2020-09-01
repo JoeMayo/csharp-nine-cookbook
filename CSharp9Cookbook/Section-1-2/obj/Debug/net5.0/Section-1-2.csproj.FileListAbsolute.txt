@@ -1,0 +1,15 @@
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\bin\Debug\net5.0\Section-1-2.exe
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\bin\Debug\net5.0\Section-1-2.deps.json
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\bin\Debug\net5.0\Section-1-2.runtimeconfig.json
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\bin\Debug\net5.0\Section-1-2.runtimeconfig.dev.json
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\bin\Debug\net5.0\Section-1-2.dll
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\bin\Debug\net5.0\Section-1-2.pdb
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\bin\Debug\net5.0\Autofac.dll
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\obj\Debug\net5.0\Section-1-2.csprojAssemblyReference.cache
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\obj\Debug\net5.0\Section-1-2.AssemblyInfoInputs.cache
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\obj\Debug\net5.0\Section-1-2.AssemblyInfo.cs
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\obj\Debug\net5.0\Section-1-2.csproj.CoreCompileInputs.cache
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\obj\Debug\net5.0\Section-1-2.csproj.CopyComplete
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\obj\Debug\net5.0\Section-1-2.dll
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\obj\Debug\net5.0\Section-1-2.pdb
+C:\Projects\CSharp9Cookbook\CSharp9Cookbook\Section-1-2\obj\Debug\net5.0\Section-1-2.genruntimeconfig.cache
