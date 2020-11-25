@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Section_03_02
 {
@@ -6,7 +7,17 @@ namespace Section_03_02
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var orders = new List<IOrder>
+            {
+                new CustomerOrder(),
+                new CompanyOrder()
+            };
+
+            foreach (var order in orders)
+            {
+                Console.WriteLine(order.PrintOrder());
+                Console.WriteLine($"Reward: {order.GetRewards()}");
+            }
         }
     }
 }
