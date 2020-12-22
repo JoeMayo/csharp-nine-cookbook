@@ -6,7 +6,15 @@ namespace Section_03_06
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var order = new Order
+            {
+                ID = 7,
+                CustomerName = "Acme",
+                Created = DateTime.Now,
+                Amount = 2_718_281.83m
+            };
+
+            Console.WriteLine(order);
         }
     }
 }
