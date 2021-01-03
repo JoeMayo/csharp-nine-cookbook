@@ -19,33 +19,46 @@ namespace Section_03_10
         static string DoStringConcatenation(List<InvoiceItem> lineItems)
         {
             var stopwatch = new Stopwatch();
-            stopwatch.Start();
 
-            string report = "";
+            try
+            {
+                stopwatch.Start();
 
-            foreach (var item in lineItems)
-                report += $"{item.Cost:C} - {item.Description}";
+                string report = "";
 
-            stopwatch.Stop();
-            Console.WriteLine($"Time for String Concatenation: {stopwatch.ElapsedMilliseconds}");
+                foreach (var item in lineItems)
+                    report += $"{item.Cost:C} - {item.Description}";
 
-            return report;
+                Console.WriteLine($"Time for String Concatenation: {stopwatch.ElapsedMilliseconds}");
+
+                return report;
+            }
+            finally
+            {
+                stopwatch.Stop();
+            }
         }
 
         static string DoStringBuilderConcatenation(List<InvoiceItem> lineItems)
         {
             var stopwatch = new Stopwatch();
-            stopwatch.Start();
+            try
+            {
+                stopwatch.Start();
 
-            var reportBuilder = new StringBuilder();
+                var reportBuilder = new StringBuilder();
 
-            foreach (var item in lineItems)
-                reportBuilder.Append($"{item.Cost:C} - {item.Description}");
+                foreach (var item in lineItems)
+                    reportBuilder.Append($"{item.Cost:C} - {item.Description}");
 
-            stopwatch.Stop();
-            Console.WriteLine($"Time for String Builder Concatenation: {stopwatch.ElapsedMilliseconds}");
+                Console.WriteLine($"Time for String Builder Concatenation: {stopwatch.ElapsedMilliseconds}");
 
-            return reportBuilder.ToString();
+                return reportBuilder.ToString();
+            }
+            finally
+            {
+                stopwatch.Stop();
+            }
         }
 
         static List<InvoiceItem> GetInvoiceItems()
