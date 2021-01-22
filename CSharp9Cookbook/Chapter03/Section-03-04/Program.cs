@@ -25,9 +25,7 @@ namespace Section_03_04
             orders.AddItems(new List<string> { "one", null });
 
             foreach (var item in orders.GetItems().ToArray())
-            {
                 Console.WriteLine(item.Trim());
-            }
         }
 
 
@@ -42,9 +40,7 @@ namespace Section_03_04
             orders.AddItems(new List<string> { "one", null });
 
             foreach (var item in orders.GetItems().ToArray())
-            {
                 Console.WriteLine(item.Trim());
-            }
         }
 
         static void HandleWithNullAndHandling()

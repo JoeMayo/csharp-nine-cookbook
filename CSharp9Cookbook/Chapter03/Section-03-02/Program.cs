@@ -5,7 +5,7 @@ namespace Section_03_02
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var orders = new List<IOrder>
             {

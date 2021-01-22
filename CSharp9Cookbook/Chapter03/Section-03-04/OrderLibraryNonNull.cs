@@ -26,9 +26,7 @@ namespace Section_03_04
         public void AddItems(List<string> items)
         {
             foreach (var item in items)
-            {
                 Console.WriteLine(item.ToString());
-            }
         }
     }
 }
