@@ -29,12 +29,14 @@ namespace Section_03_09
                     catch (HttpRequestException hre)
                         when (hre.StatusCode == HttpStatusCode.RequestTimeout)
                     {
+                        tryCount++;
+
                         int millisecondsToDelay = DelayMilliseconds * tryCount;
+                        // or Math.Pow(DelayMilliseconds, tryCount);
+
                         Console.WriteLine(
                             $"Exception during processing - " +
                             $"delaying for {millisecondsToDelay} milliseconds");
-
-                        tryCount++;
 
                         await Task.Delay(millisecondsToDelay);
                     }

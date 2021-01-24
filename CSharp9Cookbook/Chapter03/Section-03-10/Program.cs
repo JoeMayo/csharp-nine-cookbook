@@ -9,14 +9,14 @@ namespace Section_03_10
     {
         static void Main()
         {
-            List<InvoiceItem> lineItems = GetInvoiceItems();
+            List<OrderItem> lineItems = GetOrderItems();
 
             DoStringConcatenation(lineItems);
 
             DoStringBuilderConcatenation(lineItems);
         }
 
-        static string DoStringConcatenation(List<InvoiceItem> lineItems)
+        static string DoStringConcatenation(List<OrderItem> lineItems)
         {
             var stopwatch = new Stopwatch();
 
@@ -39,7 +39,7 @@ namespace Section_03_10
             }
         }
 
-        static string DoStringBuilderConcatenation(List<InvoiceItem> lineItems)
+        static string DoStringBuilderConcatenation(List<OrderItem> lineItems)
         {
             var stopwatch = new Stopwatch();
             try
@@ -61,26 +61,26 @@ namespace Section_03_10
             }
         }
 
-        static List<InvoiceItem> GetInvoiceItems()
+        static List<OrderItem> GetOrderItems()
         {
-            const int ItemCount = 1000;
+            const int ItemCount = 10000;
 
-            var items = new List<InvoiceItem>();
+            var items = new List<OrderItem>();
             var rand = new Random();
 
             for (int i = 0; i < ItemCount; i++)
                 items.Add(
-                    new InvoiceItem
+                    new OrderItem
                     {
                         Cost = rand.Next(i),
-                        Description = "Invoice Item #" + (i + 1)
+                        Description = "Order Item #" + (i + 1)
                     });
 
             return items;
         }
     }
 
-    class InvoiceItem
+    class OrderItem
     {
         public decimal Cost { get; set; }
         public string Description { get; set; }
