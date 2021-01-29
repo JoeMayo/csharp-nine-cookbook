@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Section_04_01
+namespace Section_04_04
 {
     public class InMemoryContext
     {
@@ -33,6 +33,15 @@ namespace Section_04_01
                     Name = "Third Person",
                     PostalCode = "67890",
                     Region = "Region #3"
+                },
+                new SalesPerson
+                {
+                    ID = 4,
+                    Address = "678 9th Street",
+                    City = "Second City",
+                    Name = "Fourth Person",
+                    PostalCode = "56788",
+                    Region = "Region #2"
                 },
             };
 

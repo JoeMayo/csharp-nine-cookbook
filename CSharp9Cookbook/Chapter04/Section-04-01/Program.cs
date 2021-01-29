@@ -11,14 +11,10 @@ namespace Section_04_01
 
             var salesPersonLookup =
                 (from person in context.SalesPeople
-                 select new
-                 {
-                     person.ID,
-                     person.Name
-                 })
+                 select (person.ID, person.Name))
                 .ToList();
 
-            Console.WriteLine("Sales People");
+            Console.WriteLine("Sales People\n");
 
             salesPersonLookup.ForEach(person => 
                 Console.WriteLine($"{person.ID}. {person.Name}"));

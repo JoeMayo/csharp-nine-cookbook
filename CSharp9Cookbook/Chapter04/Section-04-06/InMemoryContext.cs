@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Section_04_01
+namespace Section_04_06
 {
     public class InMemoryContext
     {
@@ -14,7 +14,8 @@ namespace Section_04_01
                     City = "First City",
                     Name = "First Person",
                     PostalCode = "45678",
-                    Region = "Region #1"
+                    Region = "Region #1",
+                    ProductType = "Type 2"
                 },
                 new SalesPerson
                 {
@@ -23,7 +24,8 @@ namespace Section_04_01
                     City = "Second City",
                     Name = "Second Person",
                     PostalCode = "56789",
-                    Region = "Region #2"
+                    Region = "Region #2",
+                    ProductType = "Type 3"
                 },
                 new SalesPerson
                 {
@@ -32,7 +34,28 @@ namespace Section_04_01
                     City = "Third City",
                     Name = "Third Person",
                     PostalCode = "67890",
-                    Region = "Region #3"
+                    Region = "Region #3",
+                    ProductType = "Type 1"
+                },
+                new SalesPerson
+                {
+                    ID = 4,
+                    Address = "678 9th Street",
+                    City = "Fourth City",
+                    Name = "Fourth Person",
+                    PostalCode = "90123",
+                    Region = "Region #1",
+                    ProductType = "Type 2"
+                },
+                new SalesPerson
+                {
+                    ID = 4,
+                    Address = "678 9th Street",
+                    City = "Fourth City",
+                    Name = "Fourth Person",
+                    PostalCode = "90123",
+                    Region = "Region #1",
+                    ProductType = "Type 2"
                 },
             };
 
