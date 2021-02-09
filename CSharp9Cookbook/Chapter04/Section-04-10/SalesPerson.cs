@@ -1,4 +1,4 @@
-﻿namespace Section_04_02
+﻿namespace Section_04_10
 {
     public class SalesPerson
     {

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Section_04_06
 {
@@ -24,7 +23,7 @@ namespace Section_04_06
             return x.ID == y.ID;
         }
 
-        public int GetHashCode([DisallowNull] SalesPerson obj)
+        public int GetHashCode(SalesPerson obj)
         {
             return ID.GetHashCode();
         }

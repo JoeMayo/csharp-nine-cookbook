@@ -6,7 +6,7 @@ namespace Section_04_05
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             SalesPerson searchCriteria = GetCriteriaFromUser();
 
