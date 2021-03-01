@@ -52,11 +52,11 @@ namespace Section_07_05
                     }
                 ]";
 
-            inventory = new DynamicReportItem(inventory);
+            //inventory = new DynamicReportItem(inventory);
 
-            string report = new Report().Generate(inventory);
+            //string report = new Report().Generate(inventory);
 
-            Console.WriteLine(report);
+            //Console.WriteLine(report);
         }
     }
 }
