@@ -31,7 +31,7 @@ namespace Section_05_07
             Console.WriteLine(report);
         }
 
-        private static List<dynamic> GetData()
+        static List<dynamic> GetData()
         {
             string headers = "Date|Severity|Location|Message";
 
@@ -43,7 +43,7 @@ namespace Section_05_07
                 .ToList<dynamic>();
         }
 
-        private static string GetLogData()
+        static string GetLogData()
         {
             return
 "2022-11-12 12:34:56.7890|INFO|Section_05_07.Program|Got this far\n" +

@@ -19,7 +19,6 @@ namespace Section_05_01
             var report = new StringBuilder("# Report\n\n");
 
             report.Append(GetHeaders(members));
-            //report.Append(GetRows(items));
 
             return report.ToString();
         }
@@ -53,11 +52,6 @@ namespace Section_05_01
             header.Append("\n");
 
             return header;
-        }
-
-        bool GetRows(List<object> items)
-        {
-            throw new NotImplementedException();
         }
     }
 }
