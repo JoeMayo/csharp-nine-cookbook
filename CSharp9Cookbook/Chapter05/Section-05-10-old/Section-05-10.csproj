@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>Section_05_10</RootNamespace>
+    <AssemblyName>Section-05-10</AssemblyName>
+  </PropertyGroup>
+
+</Project>

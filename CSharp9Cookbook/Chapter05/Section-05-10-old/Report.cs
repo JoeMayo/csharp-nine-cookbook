@@ -1,30 +1,26 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace PythonToCS
+namespace Section_05_10
 {
     public class Report
     {
         const string ColumnSeparator = " | ";
 
-        public string GenerateDynamic(dynamic[] items)
+        public string GenerateDynamic(List<dynamic> items)
         {
-            Console.WriteLine("Items Count: " + items.Length);
-            Console.WriteLine($"First Item: {items[0].PartNumber}, {items[0].Description}, {items[0].Count}, {items[0].ItemPrice}");
-            List<dynamic> dynamicItems = items.ToList<dynamic>();
             List<object> inventory =
                 (from item in items
                  select new InventoryItem
-                 (
-                     item.PartNumber,
-                     item.Description,
-                     item.Count,
-                     item.ItemPrice
-                 ))
+                 {
+                     PartNumber = item.PartNumber,
+                     Description = item.Description,
+                     Count = item.Count,
+                     ItemPrice = item.ItemPrice
+                 })
                 .ToList<object>();
 
             return Generate(inventory);
@@ -69,20 +65,18 @@ namespace PythonToCS
         {
             var header = new StringBuilder();
 
-            header.Append(
-                string.Join(
-                    ColumnSeparator,
-                    from detail in details.Values
-                    select detail.Attribute.Name));
+            header.AppendJoin(
+                ColumnSeparator,
+                from detail in details.Values
+                select detail.Attribute.Name);
 
             header.Append("\n");
 
-            header.Append(
-                string.Join(
+            header.AppendJoin(
                 ColumnSeparator,
-                    from detail in details.Values
-                    let length = detail.Attribute.Name.Length
-                    select "".PadLeft(length, '-')));
+                from detail in details.Values
+                let length = detail.Attribute.Name.Length
+                select "".PadLeft(length, '-'));
 
             header.Append("\n");
 
@@ -100,7 +94,7 @@ namespace PythonToCS
                 List<string> columns =
                     GetColumns(details.Values, item);
 
-                rows.Append(string.Join(ColumnSeparator, columns));
+                rows.AppendJoin(ColumnSeparator, columns);
 
                 rows.Append("\n");
             }
@@ -135,10 +129,6 @@ namespace PythonToCS
                     case "Int32":
                         columns.Add(
                             string.Format(format, (int)result));
-                        break;
-                    case "Single":
-                        columns.Add(
-                            string.Format(format, (float)result));
                         break;
                     case "String":
                         columns.Add(

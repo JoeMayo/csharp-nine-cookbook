@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PythonToCS
+namespace Section_05_10
 {
     [AttributeUsage(
         AttributeTargets.Property | AttributeTargets.Method,

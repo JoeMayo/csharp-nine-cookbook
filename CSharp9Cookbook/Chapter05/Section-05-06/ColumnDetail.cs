@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace PythonToCS
+namespace Section_05_06
 {
     public class ColumnDetail
     {

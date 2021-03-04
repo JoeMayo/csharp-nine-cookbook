@@ -1,23 +1,17 @@
-﻿import sys
-sys.path.append("./bin/debug/net5.0")
+﻿import clr, os, sys
+from System.Collections.Generic import *
 
-import clr
-clr.AddReference("Section-05-10.dll")
+sys.path.append(r"C:\Projects\csharp-nine-cookbook\csharp-nine-cookbook\CSharp9Cookbook\Chapter05\Section-05-10\bin\Debug")
+clr.AddReference(r"C:\Projects\csharp-nine-cookbook\csharp-nine-cookbook\CSharp9Cookbook\Chapter05\Section-05-10\bin\Debug\PythonToCS.dll")
 
-from Section_05_10 import Report
+from PythonToCS import Report
+from PythonToCS import InventoryItem
+from System import Decimal
 
-class InventoryItem:
-    def __init__(self, PartNumber, Description, Count, ItemPrice):
-        self.PartNumber = PartNumber
-        self.Description = Description
-        self.Count = Count
-        self.ItemPrice = ItemPrice
-        
-
-inventory = []
-inventory.append(InventoryItem("1", "Part #1", 3, 5.26))
-inventory.append(InventoryItem("2", "Part #2", 1, 7.95))
-inventory.append(InventoryItem("3", "Part #1", 2, 23.13))
+inventory = [
+    InventoryItem("1", "Part #1", 3, Decimal(5.26)),
+    InventoryItem("2", "Part #2", 1, Decimal(7.95)),
+    InventoryItem("3", "Part #1", 2, Decimal(23.13))]
 
 rpt = Report()
 

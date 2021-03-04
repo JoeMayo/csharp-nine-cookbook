@@ -1,17 +1,7 @@
-﻿namespace PythonToCS
+﻿namespace Section_05_10
 {
     public class InventoryItem
     {
-        public InventoryItem(
-            string partNumber, string description, 
-            int count, decimal itemPrice)
-        {
-            PartNumber = partNumber;
-            Description = description;
-            Count = count;
-            ItemPrice = itemPrice;
-        }
-
         [Column("Part #")]
         public string PartNumber { get; set; }
 
