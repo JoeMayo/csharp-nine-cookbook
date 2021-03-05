@@ -8,6 +8,8 @@ namespace Section_05_01
 {
     public class Report
     {
+        const string ColumnSeparator = " | ";
+
         public string Generate(List<object> items)
         {
             _ = items ??
@@ -45,10 +47,10 @@ namespace Section_05_01
 
             var header = new StringBuilder();
 
-            header.Append(string.Join(" | ", columnNames));
+            header.AppendJoin(ColumnSeparator, columnNames);
             header.Append("\n");
 
-            header.Append(string.Join(" | ", underscores));
+            header.AppendJoin(ColumnSeparator, underscores);
             header.Append("\n");
 
             return header;
