@@ -1,5 +1,4 @@
-﻿import clr, os, sys
-from System.Collections.Generic import *
+﻿import clr, sys
 
 sys.path.append(r"C:\Projects\csharp-nine-cookbook\csharp-nine-cookbook\CSharp9Cookbook\Chapter05\Section-05-10\bin\Debug")
 clr.AddReference(r"C:\Projects\csharp-nine-cookbook\csharp-nine-cookbook\CSharp9Cookbook\Chapter05\Section-05-10\bin\Debug\PythonToCS.dll")

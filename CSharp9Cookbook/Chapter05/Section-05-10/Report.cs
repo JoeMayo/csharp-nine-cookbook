@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -13,9 +12,6 @@ namespace PythonToCS
 
         public string GenerateDynamic(dynamic[] items)
         {
-            Console.WriteLine("Items Count: " + items.Length);
-            Console.WriteLine($"First Item: {items[0].PartNumber}, {items[0].Description}, {items[0].Count}, {items[0].ItemPrice}");
-            List<dynamic> dynamicItems = items.ToList<dynamic>();
             List<object> inventory =
                 (from item in items
                  select new InventoryItem
