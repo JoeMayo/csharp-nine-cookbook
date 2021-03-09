@@ -23,7 +23,7 @@ namespace Section_02_09
 
         static IInvoiceRepository CreateInvoiceRepositoryFromIoC()
         {
-            return Program.Container.GetRequiredService<IInvoiceRepository>();
+            return Container.GetRequiredService<IInvoiceRepository>();
         }
 
         static void Main()

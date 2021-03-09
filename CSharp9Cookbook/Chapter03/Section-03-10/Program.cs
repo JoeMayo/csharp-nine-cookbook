@@ -29,7 +29,9 @@ namespace Section_03_10
                 foreach (var item in lineItems)
                     report += $"{item.Cost:C} - {item.Description}";
 
-                Console.WriteLine($"Time for String Concatenation: {stopwatch.ElapsedMilliseconds}");
+                Console.WriteLine(
+                    $"Time for String Concatenation: " +
+                    $"{stopwatch.ElapsedMilliseconds}");
 
                 return report;
             }
@@ -51,7 +53,9 @@ namespace Section_03_10
                 foreach (var item in lineItems)
                     reportBuilder.Append($"{item.Cost:C} - {item.Description}");
 
-                Console.WriteLine($"Time for String Builder Concatenation: {stopwatch.ElapsedMilliseconds}");
+                Console.WriteLine(
+                    $"Time for String Builder Concatenation: " +
+                    $"{stopwatch.ElapsedMilliseconds}");
 
                 return reportBuilder.ToString();
             }

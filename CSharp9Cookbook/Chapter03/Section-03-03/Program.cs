@@ -15,12 +15,14 @@ namespace Section_03_03
         {
             if (customer == null)
             {
-                throw new ArgumentNullException(nameof(customer), $"{nameof(customer)} is required.");
+                throw new ArgumentNullException(
+                    nameof(customer), $"{nameof(customer)} is required.");
             }
 
             if (lineItems == null)
             {
-                throw new ArgumentNullException(nameof(lineItems), $"{nameof(lineItems)} is required.");
+                throw new ArgumentNullException(
+                    nameof(lineItems), $"{nameof(lineItems)} is required.");
             }
 
             Console.WriteLine($"Processed {customer}");
@@ -28,8 +30,10 @@ namespace Section_03_03
 
         static void ProcessOrderNew(string customer, List<string> lineItems)
         {
-            _ = customer ?? throw new ArgumentNullException(nameof(customer), $"{nameof(customer)} is required.");
-            _ = lineItems ?? throw new ArgumentNullException(nameof(lineItems), $"{nameof(lineItems)} is required.");
+            _ = customer ?? throw new ArgumentNullException(
+                nameof(customer), $"{nameof(customer)} is required.");
+            _ = lineItems ?? throw new ArgumentNullException(
+                nameof(lineItems), $"{nameof(lineItems)} is required.");
 
             Console.WriteLine($"Processed {customer}");
         }

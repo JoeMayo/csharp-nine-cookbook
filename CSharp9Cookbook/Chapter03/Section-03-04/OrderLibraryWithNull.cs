@@ -11,7 +11,8 @@ namespace Section_03_04
         // method with null parameter
         public void AddItem(string? item)
         {
-            _ = item ?? throw new ArgumentNullException(nameof(item), $"{nameof(item)} must not be null");
+            _ = item ?? throw new ArgumentNullException(
+                nameof(item), $"{nameof(item)} must not be null");
 
             Console.Write(item.ToString());
         }

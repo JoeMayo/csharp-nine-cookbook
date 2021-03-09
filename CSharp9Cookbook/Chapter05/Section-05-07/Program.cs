@@ -46,9 +46,12 @@ namespace Section_05_07
         static string GetLogData()
         {
             return
-"2022-11-12 12:34:56.7890|INFO|Section_05_07.Program|Got this far\n" +
-"2022-11-12 12:35:12.3456|ERROR|Section_05_07.Report|Index out of range\n" +
-"2022-11-12 12:55:34.5678|WARNING|Section_05_07.Report|Please check this";
+                "2022-11-12 12:34:56.7890|INFO" +
+                "|Section_05_07.Program|Got this far\n" +
+                "2022-11-12 12:35:12.3456|ERROR" +
+                "|Section_05_07.Report|Index out of range\n" +
+                "2022-11-12 12:55:34.5678|WARNING" +
+                "|Section_05_07.Report|Please check this";
         }
     }
 }

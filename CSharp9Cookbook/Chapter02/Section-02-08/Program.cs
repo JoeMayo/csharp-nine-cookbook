@@ -19,10 +19,12 @@ namespace Section_02_08
 
         void Run()
         {
-            List<InvoiceCategory> categories = invoiceRep.GetInvoiceCategories();
+            List<InvoiceCategory> categories =
+                invoiceRep.GetInvoiceCategories();
 
             foreach (var category in categories)
-                Console.WriteLine($"ID: {category.ID}, Name: {category.Name}");
+                Console.WriteLine(
+                    $"ID: {category.ID}, Name: {category.Name}");
         }
     }
 }

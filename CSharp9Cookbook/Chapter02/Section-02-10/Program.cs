@@ -18,9 +18,12 @@ namespace Section_02_10
         static string GetInvoiceTransferFile()
         {
             return
-                "Creator 1::8/05/20::Item 1\t35.05\tItem 2\t25.18\tItem 3\t13.13::Customer 1::Note 1\n" +
-                "Creator 2::8/10/20::Item 1\t45.05::Customer 2::Note 2\n" +
-                "Creator 1::8/15/20::Item 1\t55.05\tItem 2\t65.18::Customer 3::Note 3\n";
+                "Creator 1::8/05/20::Item 1\t35.05\t" +
+                "Item 2\t25.18\tItem 3\t13.13::Customer 1::Note 1\n" +
+                "Creator 2::8/10/20::Item 1\t45.05" +
+                "::Customer 2::Note 2\n" +
+                "Creator 1::8/15/20::Item 1\t55.05\t" +
+                "Item 2\t65.18::Customer 3::Note 3\n";
         }
 
         static List<Invoice> ParseInvoices(string invoiceFile)
@@ -40,7 +43,8 @@ namespace Section_02_10
                     string matchCreated = match.Groups["created"].Value;
                     string matchItems = match.Groups["items"].Value;
 
-                    Invoice invoice = GetInvoice(matchCustomer, matchCreated, matchItems);
+                    Invoice invoice =
+                        GetInvoice(matchCustomer, matchCreated, matchItems);
                     invoices.Add(invoice);
                 }
             }

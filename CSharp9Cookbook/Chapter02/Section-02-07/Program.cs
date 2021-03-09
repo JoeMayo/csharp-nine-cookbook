@@ -4,10 +4,13 @@ namespace Section_02_07
 {
     class Program
     {
-        static readonly DateTime LinuxEpoch =   new DateTime(1970, 1, 1, 0, 0, 0, 0);
-        static readonly DateTime WindowsEpoch = new DateTime(0001, 1, 1, 0, 0, 0, 0);
+        static readonly DateTime LinuxEpoch =
+            new DateTime(1970, 1, 1, 0, 0, 0, 0);
+        static readonly DateTime WindowsEpoch =
+            new DateTime(0001, 1, 1, 0, 0, 0, 0);
         static readonly double EpochMillisecondDifference = 
-            new TimeSpan(LinuxEpoch.Ticks - WindowsEpoch.Ticks).TotalMilliseconds;
+            new TimeSpan(
+                LinuxEpoch.Ticks - WindowsEpoch.Ticks).TotalMilliseconds;
 
         static void Main()
         {
@@ -21,14 +24,18 @@ namespace Section_02_07
 
             string linuxTimestamp = ToLinuxTimestampFromDateTime(testDate);
 
-            TimeSpan dotnetTimeSpan = TimeSpan.FromMilliseconds(long.Parse(linuxTimestamp));
-            DateTime problemDate = new DateTime(dotnetTimeSpan.Ticks);
+            TimeSpan dotnetTimeSpan =
+                TimeSpan.FromMilliseconds(long.Parse(linuxTimestamp));
+            DateTime problemDate =
+                new DateTime(dotnetTimeSpan.Ticks);
 
-            Console.WriteLine($"Accidentally based on .NET Epoch: {problemDate}");
+            Console.WriteLine(
+                $"Accidentally based on .NET Epoch: {problemDate}");
 
             DateTime goodDate = ToDateTimeFromLinuxTimestamp(linuxTimestamp);
 
-            Console.WriteLine($"Properly based on Linux Epoch: {goodDate}");
+            Console.WriteLine(
+                $"Properly based on Linux Epoch: {goodDate}");
         }
 
         public static string ToLinuxTimestampFromDateTime(DateTime date)

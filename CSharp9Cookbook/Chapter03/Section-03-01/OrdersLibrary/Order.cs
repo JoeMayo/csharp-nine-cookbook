@@ -2,7 +2,8 @@
 {
     public class Order
     {
-        public decimal CalculateDiscount(CustomerType custType, decimal amount)
+        public decimal CalculateDiscount(
+            CustomerType custType, decimal amount)
         {
             decimal discount;
 

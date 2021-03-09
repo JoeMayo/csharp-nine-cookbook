@@ -5,7 +5,8 @@ namespace OrdersLibrary.Test
     public class OrderTests
     {
         [Fact]
-        public void CalculateDiscount_WithBronzeCustomer_GivesNoDiscount()
+        public void
+            CalculateDiscount_WithBronzeCustomer_GivesNoDiscount()
         {
             const decimal ExpectedDiscount = 5.00m;
 
@@ -16,7 +17,8 @@ namespace OrdersLibrary.Test
         }
 
         [Fact]
-        public void CalculateDiscount_WithSilverCustomer_GivesFivePercentDiscount()
+        public void
+            CalculateDiscount_WithSilverCustomer_GivesFivePercentDiscount()
         {
             const decimal ExpectedDiscount = 5.25m;
 
@@ -27,7 +29,8 @@ namespace OrdersLibrary.Test
         }
 
         [Fact]
-        public void CalculateDiscount_WithGoldCustomer_GivesTenPercentDiscount()
+        public void
+            CalculateDiscount_WithGoldCustomer_GivesTenPercentDiscount()
         {
             const decimal ExpectedDiscount = 5.50m;
 

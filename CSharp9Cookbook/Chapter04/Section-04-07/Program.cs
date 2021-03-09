@@ -14,7 +14,8 @@ namespace Section_04_07
                  let FullAddress =
                     $"{person.Address}\n" +
                     $"{person.City}, {person.PostalCode}"
-                 let salesOkay = decimal.TryParse(person.TotalSales, out TotalSales)
+                 let salesOkay =
+                     decimal.TryParse(person.TotalSales, out TotalSales)
                  select new
                  {
                      person.ID,
