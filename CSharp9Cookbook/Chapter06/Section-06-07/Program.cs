@@ -1,12 +1,25 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Section_06_07
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main()
         {
-            Console.WriteLine("Hello World!");
+            try
+            {
+                var checkoutSvc = new CheckoutService();
+
+                string result = await checkoutSvc.StartAsync();
+
+                Console.WriteLine($"Result: {result}");
+            }
+            catch (AggregateException aEx)
+            {
+                foreach (var ex in aEx.InnerExceptions)
+                    Console.WriteLine($"Unable to complete: {ex}");
+            }
         }
     }
 }

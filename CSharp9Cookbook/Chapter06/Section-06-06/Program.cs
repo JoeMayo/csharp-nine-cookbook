@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Section_06_06
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main()
         {
-            Console.WriteLine("Hello World!");
+            var checkoutSvc = new CheckoutService();
+
+            string result = await checkoutSvc.StartAsync();
+
+            Console.WriteLine($"Result: {result}");
         }
     }
 }
