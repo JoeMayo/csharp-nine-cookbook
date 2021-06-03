@@ -6,7 +6,13 @@ namespace Section_09_07
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Communications comm = new();
+            MailingAddress mailAddr = comm.GetAddress("Person A");
+            Console.WriteLine(mailAddr);
+
+            Shipping ship = new();
+            ShippingAddress shipAddr = ship.GetAddress("Person B");
+            Console.WriteLine(shipAddr);
         }
     }
 }
