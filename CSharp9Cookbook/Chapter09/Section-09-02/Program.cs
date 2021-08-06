@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Section_09_02
+﻿namespace Section_09_02
 {
     class Program
     {
-        // doesn't work
+        // doesn't work at this level
         // var address = new Address();
 
         // this still works
