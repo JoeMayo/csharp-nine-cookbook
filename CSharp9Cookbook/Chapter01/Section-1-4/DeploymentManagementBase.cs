@@ -2,7 +2,7 @@
 {
     public abstract class DeploymentManagementBase
     {
-        private IDeploymentPlugin deploymentService;
+        IDeploymentPlugin deploymentService;
 
         protected abstract IDeploymentPlugin CreateDeploymentService();
 

@@ -1,6 +1,6 @@
 ﻿namespace Section_03_05
 {
-    class Delivery
+    public class Delivery
     {
         public const string NextDay = "Next Day";
         public const string Standard = "Standard";

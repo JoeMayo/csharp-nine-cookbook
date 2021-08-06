@@ -51,7 +51,7 @@ namespace Section_02_03
         }
     }
 
-    enum CustomerType
+    public enum CustomerType
     {
         None,
         Bronze,
@@ -59,7 +59,7 @@ namespace Section_02_03
         Gold
     }
 
-    class InvoiceItem
+    public class InvoiceItem
     {
         public decimal Cost { get; set; }
         public string Description { get; set; }

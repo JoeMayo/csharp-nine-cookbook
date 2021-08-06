@@ -2,7 +2,7 @@
 
 namespace Section_03_07
 {
-    class Orders
+    public class Orders
     {
         public void Process()
         {

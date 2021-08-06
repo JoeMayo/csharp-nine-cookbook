@@ -14,7 +14,7 @@ namespace Section_05_01
         {
             _ = items ??
                 throw new ArgumentNullException(
-                    $"{items} is required");
+                    $"{nameof(items)} is required");
             MemberInfo[] members =
                 items.First().GetType().GetMembers();
 

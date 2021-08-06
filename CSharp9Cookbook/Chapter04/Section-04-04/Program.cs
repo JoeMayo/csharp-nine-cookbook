@@ -11,7 +11,8 @@ namespace Section_04_04
 
             var salesPeopleByRegion =
                 (from person in context.SalesPeople
-                 group person by person.Region into personGroup
+                 group person by person.Region 
+                 into personGroup
                  select personGroup)
                 .ToList();
 

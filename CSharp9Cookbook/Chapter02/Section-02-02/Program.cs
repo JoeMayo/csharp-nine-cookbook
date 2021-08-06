@@ -20,12 +20,11 @@ namespace Section_02_02
 
         static void WriteDetails()
         {
-
             using var writer = new StreamWriter(FileName);
 
             Console.WriteLine("Type details and press [Enter] to end.\n");
 
-            string detail = string.Empty;
+            string detail;
             do
             {
                 Console.Write("Detail: ");
@@ -41,7 +40,7 @@ namespace Section_02_02
 
             using var reader = new StreamReader(FileName);
 
-            string detail = string.Empty;
+            string detail;
             do
             {
                 detail = reader.ReadLine();

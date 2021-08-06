@@ -4,7 +4,7 @@ namespace Section_1_6
 {
     class Program
     {
-        DeploymentService deployment = new DeploymentService();
+        readonly DeploymentService deployment = new DeploymentService();
         static void Main(string[] args)
         {
             new Program().Start();

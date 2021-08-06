@@ -104,17 +104,17 @@ namespace Section_05_02
                 (object result, Type columnType) =
                     GetReflectedResult(item, member);
 
-                switch (columnType.Name)
+                switch (columnType.FullName)
                 {
-                    case "Decimal":
+                    case "System.Decimal":
                         columns.Add(
                             string.Format(format, (decimal)result));
                         break;
-                    case "Int32":
+                    case "System.Int32":
                         columns.Add(
                             string.Format(format, (int)result));
                         break;
-                    case "String":
+                    case "System.String":
                         columns.Add(
                             string.Format(format, (string)result));
                         break;

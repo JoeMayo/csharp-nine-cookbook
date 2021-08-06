@@ -2,7 +2,7 @@
 
 namespace Section_03_05
 {
-    class Order
+    public class Order
     {
         public string DeliveryInstructions { get; set; }
 

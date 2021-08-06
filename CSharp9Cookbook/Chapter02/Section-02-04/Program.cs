@@ -6,7 +6,7 @@ namespace Section_02_04
     {
         static void Main(string[] args)
         {
-            List<IInvoice> invoices = GetInvoices();
+            IEnumerable<IInvoice> invoices = GetInvoices();
 
             foreach (var invoice in invoices)
             {
@@ -19,7 +19,7 @@ namespace Section_02_04
             }
         }
 
-        static List<IInvoice> GetInvoices()
+        static IEnumerable<IInvoice> GetInvoices()
         {
             return new List<IInvoice>
             {

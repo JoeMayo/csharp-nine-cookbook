@@ -16,7 +16,7 @@ namespace Section_03_02
             foreach (var order in orders)
             {
                 Console.WriteLine(order.PrintOrder());
-                Console.WriteLine($"Reward: {order.GetRewards()}");
+                Console.WriteLine($"Rewards: {order.GetRewards()}");
             }
         }
     }

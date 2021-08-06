@@ -29,7 +29,6 @@ namespace Section_05_03
             List<TData> items,
             Dictionary<string, ColumnDetail> details);
 
-
         Dictionary<string, ColumnDetail> GetColumnDetails(
             List<TData> items)
         {

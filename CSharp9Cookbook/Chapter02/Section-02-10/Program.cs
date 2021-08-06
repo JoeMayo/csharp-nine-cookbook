@@ -94,17 +94,16 @@ namespace Section_02_10
         }
     }
 
-    class InvoiceItem
+    public class InvoiceItem
     {
         public decimal Cost { get; set; }
         public string Description { get; set; }
     }
 
-    class Invoice
+    public class Invoice
     {
         public string Customer { get; set; }
         public DateTime Created { get; set; }
         public List<InvoiceItem> Items { get; set; }
-        public decimal Total { get; set; }
     }
 }

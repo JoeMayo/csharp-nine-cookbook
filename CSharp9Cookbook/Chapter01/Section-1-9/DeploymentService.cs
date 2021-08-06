@@ -6,7 +6,6 @@
         {
             throw new DeploymentValidationException(
                 "Smoke test failed - check with qa@example.com.",
-                null,
                 ValidationFailureReason.SmokeTestFailed);
         }
     }

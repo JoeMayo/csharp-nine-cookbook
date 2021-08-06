@@ -19,7 +19,7 @@ namespace Section_04_06
             var salesPeopleWithComparer =
                 (from person in new InMemoryContext().SalesPeople
                  select person)
-                .Distinct(new SalesPerson())
+                .Distinct(new SalesPersonComparer())
                 .ToList();
 
             PrintResults(salesPeopleWithComparer, "With Comparer");

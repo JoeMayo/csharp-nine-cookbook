@@ -20,7 +20,7 @@ namespace Section_02_01
             string report = "";
 
             foreach (var item in lineItems)
-                report += $"{item.Cost:C} - {item.Description}";
+                report += $"{item.Cost:C} - {item.Description}\n";
 
             return report;
         }
@@ -30,7 +30,7 @@ namespace Section_02_01
             var reportBuilder = new StringBuilder();
 
             foreach (var item in lineItems)
-                reportBuilder.Append($"{item.Cost:C} - {item.Description}");
+                reportBuilder.Append($"{item.Cost:C} - {item.Description}\n");
 
             return reportBuilder.ToString();
         }
@@ -51,7 +51,7 @@ namespace Section_02_01
         }
     }
 
-    class InvoiceItem
+    public class InvoiceItem
     {
         public decimal Cost { get; set; }
         public string Description { get; set; }

@@ -27,7 +27,7 @@ namespace Section_03_10
                 string report = "";
 
                 foreach (var item in lineItems)
-                    report += $"{item.Cost:C} - {item.Description}";
+                    report += $"{item.Cost:C} - {item.Description}\n";
 
                 Console.WriteLine(
                     $"Time for String Concatenation: " +
@@ -51,7 +51,7 @@ namespace Section_03_10
                 var reportBuilder = new StringBuilder();
 
                 foreach (var item in lineItems)
-                    reportBuilder.Append($"{item.Cost:C} - {item.Description}");
+                    reportBuilder.Append($"{item.Cost:C} - {item.Description}\n");
 
                 Console.WriteLine(
                     $"Time for String Builder Concatenation: " +
@@ -84,7 +84,7 @@ namespace Section_03_10
         }
     }
 
-    class OrderItem
+    public class OrderItem
     {
         public decimal Cost { get; set; }
         public string Description { get; set; }

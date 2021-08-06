@@ -20,16 +20,16 @@ namespace Section_07_02
 
             Console.WriteLine($"Cypher Text: {cypherText}");
 
-            string decrytedPlainText = crypto.Decrypt(cypherBytes, key);
+            string decryptedPlainText = crypto.Decrypt(cypherBytes, key);
 
-            Console.WriteLine($"Plain Text: {decrytedPlainText}");
+            Console.WriteLine($"Plain Text: {decryptedPlainText}");
         }
 
         static byte[] GenerateKey()
         {
-            const int Keyength = 32;
+            const int KeyLength = 32;
 
-            byte[] key = new byte[Keyength];
+            byte[] key = new byte[KeyLength];
             var rngRand = new RNGCryptoServiceProvider();
 
             rngRand.GetBytes(key);

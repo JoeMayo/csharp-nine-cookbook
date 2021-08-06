@@ -22,14 +22,16 @@ namespace Section_02_05
             Console.WriteLine($"# of Invoices to Process: {invoicesToProcess.Count}");
         }
 
-        private static List<Invoice> GetAllInvoices()
+        static List<Invoice> GetAllInvoices()
         {
+            DateTime date = DateTime.Now;
+
             return new List<Invoice>
             {
-                new Invoice { CustomerID = 1, Created = DateTime.Now },
-                new Invoice { CustomerID = 2, Created = DateTime.Now },
-                new Invoice { CustomerID = 1, Created = DateTime.Now },
-                new Invoice { CustomerID = 3, Created = DateTime.Now }
+                new Invoice { CustomerID = 1, Created = date },
+                new Invoice { CustomerID = 2, Created = date },
+                new Invoice { CustomerID = 1, Created = date },
+                new Invoice { CustomerID = 3, Created = date }
             };
         }
     }

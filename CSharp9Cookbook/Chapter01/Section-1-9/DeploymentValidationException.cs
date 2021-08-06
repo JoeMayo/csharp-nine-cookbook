@@ -21,6 +21,12 @@ namespace Section_1_9
             this(message, innerException, ValidationFailureReason.Unknown)
         {
         }
+        
+        public DeploymentValidationException(
+            string message, ValidationFailureReason reason) : 
+            this(message, null, reason)
+        {
+        }
 
         public DeploymentValidationException(
             string message, Exception innerException, ValidationFailureReason reason) :

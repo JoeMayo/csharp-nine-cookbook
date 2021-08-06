@@ -5,7 +5,7 @@ namespace Section_1_2
 {
     class Program
     {
-        public readonly IDeploymentService service;
+        readonly IDeploymentService service;
 
         public Program(IDeploymentService service)
         {

@@ -2,7 +2,7 @@
 
 namespace Section_03_07
 {
-    class OrderOrchestrator
+    public class OrderOrchestrator
     {
         public static void HandleOrdersWrong()
         {

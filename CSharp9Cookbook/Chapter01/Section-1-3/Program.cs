@@ -2,7 +2,7 @@
 {
     public class Program
     {
-        ThirdPartyDeploymentService service;
+        readonly ThirdPartyDeploymentService service;
 
         public Program(IValidatorFactory factory)
         {

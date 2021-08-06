@@ -4,7 +4,7 @@ namespace Section_1_4
 {
     class Program
     {
-        DeploymentManagementBase[] deploymentManagers;
+        readonly DeploymentManagementBase[] deploymentManagers;
 
         public Program(DeploymentManagementBase[] deploymentManagers)
         {

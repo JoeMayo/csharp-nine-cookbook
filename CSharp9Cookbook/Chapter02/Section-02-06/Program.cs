@@ -60,7 +60,7 @@ namespace Section_02_06
         }
     }
 
-    class BillingCategory
+    public class BillingCategory
     {
         public int ID { get; set; }
         public string Name { get; set; }

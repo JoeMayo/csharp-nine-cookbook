@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Section_03_06
 {
-    class Order
+    public class Order
     {
         public int ID { get; set; }
 

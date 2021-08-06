@@ -12,11 +12,6 @@ namespace Section_02_08
             this.invoiceRep = invoiceRep;
         }
 
-        static void Main()
-        {
-            new Program(new InvoiceRepository()).Run();
-        }
-
         void Run()
         {
             List<InvoiceCategory> categories =
@@ -25,6 +20,11 @@ namespace Section_02_08
             foreach (var category in categories)
                 Console.WriteLine(
                     $"ID: {category.ID}, Name: {category.Name}");
+        }
+
+        static void Main()
+        {
+            new Program(new InvoiceRepository()).Run();
         }
     }
 }

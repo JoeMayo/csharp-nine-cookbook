@@ -2,7 +2,20 @@
 
 namespace Section_04_06
 {
-    public class SalesPerson : IEqualityComparer<SalesPerson>
+    public class SalesPersonComparer : IEqualityComparer<SalesPerson>
+    {
+        public bool Equals(SalesPerson x, SalesPerson y)
+        {
+            return x.ID == y.ID;
+        }
+
+        public int GetHashCode(SalesPerson obj)
+        {
+            return obj.GetHashCode();
+        }
+    }
+
+    public class SalesPerson
     {
         public int ID { get; set; }
 
@@ -17,15 +30,5 @@ namespace Section_04_06
         public string Region { get; set; }
 
         public string ProductType { get; set; }
-
-        public bool Equals(SalesPerson x, SalesPerson y)
-        {
-            return x.ID == y.ID;
-        }
-
-        public int GetHashCode(SalesPerson obj)
-        {
-            return ID.GetHashCode();
-        }
     }
 }
