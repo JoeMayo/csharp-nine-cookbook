@@ -5,12 +5,12 @@ namespace Section_02_06
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             List<BillingCategory> categories = GetBillingCategories();
 
             List<BillingCategory> hierarchy = 
-                BuildHierarchy(categories, catID: null, level: 0);
+                BuildHierarchy(categories);
 
             PrintHierarchy(hierarchy);
         }
@@ -22,24 +22,30 @@ namespace Section_02_06
         }
 
         static List<BillingCategory> BuildHierarchy(
-             List<BillingCategory> categories, int? catID, int level)
+             List<BillingCategory> categories)
         {
-            var found = new List<BillingCategory>();
+            return BuildHierarchy(catID: null, level: 0);
 
-            foreach (var cat in categories)
+            List<BillingCategory> BuildHierarchy(int? catID, int level)
             {
-                if (cat.Parent == catID)
-                {
-                    cat.Name = new string('\t', level) + cat.Name;
-                    found.Add(cat);
-                    List<BillingCategory> subCategories = 
-                        BuildHierarchy(categories, cat.ID, level + 1);
-                    found.AddRange(subCategories);
-                }
-            }
+                var found = new List<BillingCategory>();
 
-            return found;
+                foreach (var cat in categories)
+                {
+                    if (cat.Parent == catID)
+                    {
+                        cat.Name = new string('\t', level) + cat.Name;
+                        found.Add(cat);
+                        List<BillingCategory> subCategories = 
+                            BuildHierarchy(cat.ID, level + 1);
+                        found.AddRange(subCategories);
+                    }
+                }
+
+                return found;
+            }
         }
+
 
         static List<BillingCategory> GetBillingCategories()
         {
