@@ -6,11 +6,15 @@ namespace Section_03_07
     {
         static void Main(string[] args)
         {
+            AppDomain.CurrentDomain.UnhandledException += 
+                (object sender, UnhandledExceptionEventArgs e) => 
+                System.Console.WriteLine("\n\nUnhandled Exception:\n" + e);
+
             try
             {
                 OrderOrchestrator.HandleOrdersWrong();
             }
-            catch (ArgumentException ex)
+            catch (InvalidOperationException ex)
             {
                 Console.WriteLine("Handle Orders Wrong:\n" + ex);
             }
@@ -19,7 +23,7 @@ namespace Section_03_07
             {
                 OrderOrchestrator.HandleOrdersBetter1();
             }
-            catch (ArgumentException ex)
+            catch (InvalidOperationException ex)
             {
                 Console.WriteLine("\n\nHandle Orders Better #1:\n" + ex);
             }
@@ -32,6 +36,8 @@ namespace Section_03_07
             {
                 Console.WriteLine("\n\nHandle Orders Better #2:\n" + ex);
             }
+
+            OrderOrchestrator.DontHandleOrders();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Section_03_07
             }
             catch (IndexOutOfRangeException ex)
             {
-                throw new ArgumentException(ex.Message);
+                throw new InvalidOperationException(ex.Message);
             }
         }
 
@@ -24,7 +24,7 @@ namespace Section_03_07
             }
             catch (IndexOutOfRangeException ex)
             {
-                throw new ArgumentException("Error Processing Orders", ex);
+                throw new InvalidOperationException("Error Processing Orders", ex);
             }
         }
 
@@ -38,6 +38,11 @@ namespace Section_03_07
             {
                 throw;
             }
+        }
+
+        public static void DontHandleOrders()
+        {
+            new Orders().Process();
         }
     }
 }

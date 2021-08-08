@@ -8,10 +8,7 @@ namespace Section_02_06
         static void Main()
         {
             List<BillingCategory> categories = GetBillingCategories();
-
-            List<BillingCategory> hierarchy = 
-                BuildHierarchy(categories);
-
+            List<BillingCategory> hierarchy = BuildHierarchy(categories);
             PrintHierarchy(hierarchy);
         }
 
