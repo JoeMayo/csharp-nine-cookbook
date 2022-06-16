@@ -43,6 +43,9 @@ namespace Section_07_01
             byte[] saltedPassword =
                 new byte[salt.Length + passwordBytes.Length];
 
+            Array.Copy(passwordBytes, saltedPassword, passwordBytes.Length);
+            Array.Copy(salt, 0, saltedPassword, passwordBytes.Length, salt.Length);
+
             using var hash = new MD5CryptoServiceProvider();
 
             return hash.ComputeHash(saltedPassword);
@@ -54,6 +57,9 @@ namespace Section_07_01
 
             byte[] saltedPassword =
                 new byte[salt.Length + passwordBytes.Length];
+
+            Array.Copy(passwordBytes, saltedPassword, passwordBytes.Length);
+            Array.Copy(salt, 0, saltedPassword, passwordBytes.Length, salt.Length);
 
             using var hash = new SHA256CryptoServiceProvider();
 
