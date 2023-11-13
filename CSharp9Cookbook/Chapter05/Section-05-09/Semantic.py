@@ -1,7 +1,7 @@
 ﻿import sys
-sys.path.append(
-    "/System/Library/Frameworks/Python.framework" +
-    "/Versions/Current/lib/python2.7")
+#sys.path.append(
+#    "/System/Library/Frameworks/Python.framework" +
+#    "/Versions/Current/lib/python2.7")
 
 from random import *
 
